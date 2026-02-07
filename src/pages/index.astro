@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import IntroFeatures from '../components/IntroFeatures.astro';
+import ValueProp from '../components/ValueProp.astro';
+import ServiceBackup from '../components/ServiceBackup.astro';
+import ServiceSecurity from '../components/ServiceSecurity.astro';
+import Portfolio from '../components/Portfolio.astro';
+import BlogAndChecklist from '../components/BlogAndChecklist.astro';
+
+// Default props handling
+const { items = [] } = Astro.props;
+---
+
+<BaseLayout title="Essential Tech Help">
+	<Header />
+	<main>
+		<Hero />
+        <IntroFeatures />
+        <ValueProp />
+        <ServiceBackup />
+        <Portfolio />
+        <ServiceSecurity />
+        <BlogAndChecklist />
+	</main>
+	<Footer />
+</BaseLayout>

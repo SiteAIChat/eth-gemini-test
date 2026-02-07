@@ -1,0 +1,16 @@
+---
+const { items = [] } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
+<footer class="bg-gray-50 border-t border-gray-100 pt-16 pb-8">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+            <div class="mb-4 md:mb-0">
+                <img src="https://essentialtechhelp.com/wp-content/uploads/2023/01/Essential-Tech-Help-Logo-500-%C3%97-150-px.png" alt="Essential Tech Help" class="h-10 w-auto opacity-80 grayscale hover:grayscale-0 transition-all" />
+            </div>
+            <div class="text-sm text-gray-500">
+                &copy; {currentYear} Essential Tech Help. All rights reserved.
+            </div>
+        </div>
+    </div>
+</footer>

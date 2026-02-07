@@ -1,0 +1,37 @@
+---
+const { items = [] } = Astro.props;
+---
+<section class="py-20 bg-gray-50" id="blog">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Latest Blog Posts</h2>
+        <div class="grid md:grid-cols-3 gap-8 mb-20">
+            {[1, 2, 3].map((i) => (
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <div class="h-48 bg-gray-200 rounded-lg mb-4 animate-pulse"></div>
+                    <div class="h-6 bg-gray-200 rounded w-3/4 mb-2 animate-pulse"></div>
+                    <div class="h-4 bg-gray-200 rounded w-1/2 animate-pulse"></div>
+                </div>
+            ))}
+        </div>
+
+        <div class="bg-gradient-to-r from-primary to-blue-600 rounded-3xl p-8 md:p-12 text-white overflow-hidden relative">
+            <div class="flex flex-col md:flex-row items-center gap-12 relative z-10">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Free Interactive Tech Checklist</h2>
+                     <p class="text-blue-100 text-lg mb-8">
+                        Are you missing the essentials? Download our free checklist to ensure your business technology is secure and efficient.
+                    </p>
+                    <a href="#" class="inline-block px-8 py-4 bg-white text-primary font-bold rounded-lg shadow-lg hover:bg-blue-50 transition-all transform hover:scale-105">
+                        Download Now
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://essentialtechhelp.com/wp-content/uploads/2023/01/product-opt-in@2x.png" alt="Interactive Tech Checklist" class="max-w-xs md:max-w-sm drop-shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-500" />
+                </div>
+            </div>
+            <!-- Decorative circles -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"></div>
+        </div>
+    </div>
+</section>
